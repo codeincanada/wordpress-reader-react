@@ -1,0 +1,17 @@
+/*flex utils*/
+// this comment is never compiled
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-c {
+  justify-content: center;
+}
+
+.align-c {
+  align-items: center;
+}

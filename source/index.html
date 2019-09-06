@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Worker 101</title>
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col justify-c align-c">
+<main>
+    <h1>The idea here is to cache images for offline use.</h1>
+    <ol>
+        <li>Upon loading - connect to the API and load 3 images async.</li>
+        <li>If network is not available, just continue serving the assets previously acquired (looping the current
+            available set).
+        </li>
+        <li>If network is available, retrieve a new set of 3 images (anb obviously these should be the new fresh cache).
+        </li>
+    </ol>
+    <h4 class="highlight-box">In order to validate the service worker behavior (regarding caching) all images should
+        have always the same name
+        (a, b and c).
+    </h4>
+    <input class="button" type="button" value="Next">
+    <aside>
+        <div class="placeholder"></div>
+        <!-- TODO: indicate here which image is being displayed-->
+        <ul class="image-list">
+            <li class="image-item">Spider-man</li>
+            <li class="image-item">Super-man</li>
+            <li class="image-item">He-man</li>
+        </ul>
+    </aside>
+</main>
+</body>
+</html>

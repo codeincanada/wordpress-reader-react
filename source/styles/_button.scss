@@ -1,0 +1,29 @@
+/*button styling*/
+// this comment is never compiled
+@import "variables";
+
+.button {
+  cursor: pointer;
+  outline: none;
+  //box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  background-color: $background-color;
+  //color: $background-color;
+  color: $secondary;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+
+  transition-duration: 200ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    border: 1px solid $secondary;
+    background-color: $primary;
+    color: $secondary;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+}
