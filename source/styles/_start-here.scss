@@ -1,6 +1,6 @@
 /*caution - assigned to all*/
 // this comment is never compiled
-@import 'variables';
+@import "variables";
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@
 body {
   padding: 1rem;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   background-color: $background-color;
   color: $primary;

@@ -3,9 +3,9 @@ STYLES.CSS IS THE ONLY CSS ENTRY POINT
 */
 //All SCSS imports are referenced here
 //Note: order matters
-@import 'start-here';
-@import 'button';
-@import 'flex-utilities';
+@import "start-here";
+@import "button";
+@import "flex-utilities";
 @import "variables";
 
 .placeholder {
