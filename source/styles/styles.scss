@@ -8,6 +8,24 @@ STYLES.CSS IS THE ONLY CSS ENTRY POINT
 @import "flex-utilities";
 @import "variables";
 
+//TEMP #1
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  & > li {
+    margin-left: 2rem;
+    list-style: lower-latin;
+  }
+}
+
+//TEMP #2
+h1 {
+  margin: 0 0 1rem;
+  line-height: 1;
+  text-decoration: underline;
+}
+
 .placeholder {
   background-image: url("../images/placeholder.jpg");
   background-position: center;
@@ -26,4 +44,23 @@ STYLES.CSS IS THE ONLY CSS ENTRY POINT
   border-radius: 4px;
   border: 1px solid $secondary;
   margin: 0.5rem;
+}
+
+.max500 {
+  width: 90vw;
+  max-width: 500px;
+}
+
+.row-to-column {
+  display: flex;
+  @media all and (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+.equal-size-children {
+  display: flex;
+  & > * {
+    flex: 1;
+  }
 }
