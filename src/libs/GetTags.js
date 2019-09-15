@@ -1,6 +1,6 @@
-const API_URL = "http://localhost:8000/wp-json/wp/v2/posts";
+const API_URL = "http://localhost:8000/wp-json/wp/v2/tags";
 
-const GetPosts = fetch(API_URL)
+const GetTags = fetch(API_URL)
   .then(async intialResponse => {
     const transformedResponse = await intialResponse.json();
     return transformedResponse.map(entry => {
@@ -10,4 +10,4 @@ const GetPosts = fetch(API_URL)
   })
   .catch(e => console.error(e));
 
-export default GetPosts;
+export default GetTags;
