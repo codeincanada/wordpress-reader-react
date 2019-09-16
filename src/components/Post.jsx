@@ -4,11 +4,14 @@ import "./Post.css";
 // Create an Inline list shared component
 const Categories = props => {
   const items = props.in.map((e, i) => <li key={i}>{e}</li>);
-  return <ul className="InlineList">{items}</ul>;
+  const classes = "InlineList " + props.className;
+  return <ul className={classes}>{items}</ul>;
 };
 const Tags = props => {
   const items = props.in.map((e, i) => <li key={i}>{e}</li>);
-  return <ul className="InlineList">{items}</ul>;
+  const classes = "InlineList " + props.className;
+
+  return <ul className={classes}>{items}</ul>;
 };
 
 const Post = props => {
@@ -18,6 +21,7 @@ const Post = props => {
   const categories = props.categories;
   const tags = props.tags;
 
+  // TODO: move to an external lib
   const translatedCategories = post.categories.map(postCatId => {
     if (categories) {
       const found = categories.find(catId => {
@@ -34,6 +38,7 @@ const Post = props => {
     }
   });
 
+  // TODO: move to an external lib
   const translatedTags = post.tags.map(postTagId => {
     if (tags) {
       const found = tags.find(tagId => {
@@ -66,11 +71,11 @@ const Post = props => {
         </h2>
         <aside className="PostFooter">
           <div className="CatsAndTags">
-            <span>
+            <span className="firstRow">
               Published on {post.date} and authored by #{post.author}
             </span>
-            <Categories in={translatedCategories} />
-            <Tags in={translatedTags} />
+            <Categories in={translatedCategories} className="secondRow" />
+            <Tags in={translatedTags} className="thirdRow" />
           </div>
           <div className="ButtonContainer">
             {/* TODO: Service Worker and Local Storage */}

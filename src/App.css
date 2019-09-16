@@ -14,3 +14,19 @@ body {
   color: whitesmoke;
   min-height: 100vh;
 }
+
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+a::after {
+  content: " 🚀";
+  font-size: 0.6em;
+}
+
+button,
+input[type="button"] {
+  cursor: pointer;
+  outline: none;
+}
