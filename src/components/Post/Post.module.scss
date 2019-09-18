@@ -3,24 +3,34 @@
     --background-color: #474747;
     --font-color: white;
 }
-
+.NewRoot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+}
 .Root {
     background-color: var(--background-color);
     margin-bottom: 1rem;
-    /* border-radius: 4px; */
-    max-width: 800px;
-    margin: 1rem auto;
+    padding-bottom: 1rem;
+
+    &:hover .PostTitleContainer {
+        border-left: 0.5rem solid var(--highlight-color);
+    }
 }
 
 .PostTitleContainer {
     display: flex;
     align-items: center;
-    padding: 1rem;
     margin: 0;
     width: 100%;
-    border: 1px solid;
-    border-bottom: none;
-    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid transparent;
+    transition-duration: 200ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
 }
 .LinkWrapper {
     flex: 1;
@@ -51,8 +61,6 @@
 
 .PostFooter {
     flex-direction: column;
-    border: 1px solid;
-    border-top: none;
     padding: 1rem;
     display: flex;
     justify-content: space-around;
@@ -60,24 +68,22 @@
     flex-wrap: wrap;
     width: 100%;
     background-color: hsla(0, 0%, 0%, 0.2);
+    transition-duration: 200ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
 }
 
 .PostFooter > * {
     flex: 1;
 }
 
-.CatsAndTags {
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.InlineList {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    list-style: none;
+.Content {
+    padding: 0.5rem 1rem;
+    background-color: #a9a9a921;
+    margin-bottom: 3rem;
+    transition-duration: 200ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
 }
 
 .ButtonContainer {
@@ -85,14 +91,19 @@
     width: 100%;
 }
 .ButtonContainer > button {
-    background-color: transparent;
-    border: 1px solid var(--font-color);
-    color: var(--font-color);
-    font-size: inherit;
+    // Position
+    // Display
     flex: 1;
-    padding: 0.25rem;
+    // Box
     margin: 0 0.5rem;
-
+    border: 1px solid var(--font-color);
+    padding: 0.25rem;
+    // Other
+    background-color: transparent;
+    // color: var(--font-color);
+    color: rgba(245, 245, 245, 0.55);
+    white-space: nowrap;
+    // Transition
     transition-duration: 200ms;
     transition-property: all;
     transition-timing-function: ease-in-out;
@@ -101,37 +112,20 @@
 .ButtonContainer > button:hover,
 .ButtonContainer > button:focus,
 .ButtonContainer > button:active {
+    color: white;
     border: 1px solid var(--font-color);
-    // color: var(--highlight-color);
     background-color: var(--highlight-color);
     outline: none;
 }
 
-.firstRow {
-    flex: 1;
-    margin: 0.5rem 0;
-}
-
-.secondRow {
-    padding-right: 0.5rem;
-    border-right: 2px solid var(--highlight-color);
-}
-
-.thirdRow {
-    padding-left: 0.5rem;
-}
-
 @media all and (max-width: 800px) {
-    .secondRow,
-    .thirdRow {
-        flex: 1;
+    .PostTitleContainer {
+        padding: 0.5rem;
+        font-size: 1rem;
     }
-    .CatsAndTags {
-        flex-wrap: wrap;
-    }
-    .CatsAndTags > span {
-        display: block;
-        width: 100%;
+    .Root,
+    .PostFooter {
+        padding-bottom: 0;
     }
 }
 
@@ -147,7 +141,6 @@
 
 @media all and (min-width: 800px) {
     .LinkWrapper {
-        /* order: 1; */
         justify-content: flex-end;
         padding-right: 1rem;
     }
@@ -156,21 +149,15 @@
         background-color: transparent;
         border-bottom: 2px solid;
     }
-    .PostTitleContainer,
+
     .PostFooter {
         border-radius: unset;
         border: unset;
         border-bottom: none;
-    }
-
-    .PostFooter {
         max-width: 40%;
         font-size: 0.75rem;
         background-color: transparent;
     }
-    // .PostTitleContainer {
-        // background-color: #313131;
-    // }
 
     .ButtonContainer > button {
         align-self: center;

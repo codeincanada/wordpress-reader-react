@@ -1,38 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 * {
-  box-sizing: border-box;
-  user-select: none;
-  transition-duration: 200ms;
-  transition-property: all;
-  transition-timing-function: ease-in-out;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*default inheritance*/
 body {
-  padding: 1rem;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #313131;
-  color: whitesmoke;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    user-select: none;
+    padding: 1rem;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #313131;
+    color: rgba(245, 245, 245, 0.55);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
-// a::after {
-//   content: " 🚀";
-//   font-size: 0.6em;
-// }
 
 button,
-input[type="button"] {
-  cursor: pointer;
-  outline: none;
+input[type='button'] {
+    cursor: pointer;
+    outline: none;
 }
