@@ -6,6 +6,8 @@ STYLES.CSS IS THE ONLY CSS ENTRY POINT
 * {
   box-sizing: border-box;
   user-select: none;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 /*default inheritance*/
@@ -13,8 +15,6 @@ body {
   padding: 1rem;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
   background-color: #313131;
   color: dodgerblue;
   min-height: 100vh;

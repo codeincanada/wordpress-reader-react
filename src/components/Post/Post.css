@@ -1,129 +1,165 @@
 :root {
-  --highlight-color: hotpink;
-  --background-color: #474747;
-  --font-color: whitesmoke;
+    --highlight-color: hotpink;
+    --background-color: #474747;
+    --font-color: whitesmoke;
 }
 
 .Post {
-  background-color: var(--background-color);
-  margin-bottom: 1rem;
-  border-radius: 4px;
-  max-width: 800px;
-  margin: 1rem auto;
+    background-color: var(--background-color);
+    margin-bottom: 1rem;
+    /* border-radius: 4px; */
+    max-width: 800px;
+    margin: 1rem auto;
 }
 
 .PostTitleContainer {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  margin: 0;
-  width: 100%;
-  background-color: hsla(0, 0%, 0%, 0.2);
-  border: 1px solid;
-  border-bottom: none;
-  border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 0.2);
+    border: 1px solid;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
 }
 .LinkWrapper {
-  flex: 1;
-  color: var(--font-color);
+    flex: 1;
+    color: var(--font-color);
 }
 
 .LinkWrapper > span {
-  text-decoration: underline solid var(--highlight-color);
+    text-decoration: underline solid var(--highlight-color);
 }
 .PostTitle {
-  display: block;
+    display: block;
 }
 
 .PostID {
-  background-color: var(--font-color);
-  padding: 0 0.5rem;
-  font-size: 0.75em;
-  color: var(--highlight-color);
-  border: 1px solid var(--highlight-color);
+    background-color: var(--font-color);
+    padding: 0 0.5rem;
+    font-size: 0.75em;
+    color: var(--highlight-color);
+    border: 1px solid var(--highlight-color);
 }
 
 .PostFooter {
-  flex-direction: column;
-  border: 1px solid;
-  border-top: none;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  padding-bottom: 0.5rem;
+    flex-direction: column;
+    border: 1px solid;
+    border-top: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .PostFooter > * {
-  flex: 1;
+    flex: 1;
 }
 
 .CatsAndTags {
-  width: 100%;
-  display: flex;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .InlineList {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0;
-  list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    list-style: none;
 }
 
 .ButtonContainer {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 .ButtonContainer > button {
-  background-color: transparent;
-  border: 1px solid var(--font-color);
-  color: var(--font-color);
-  font-size: inherit;
-  flex: 1;
-  padding: 0.5rem 0;
-  margin: 0 1rem;
+    background-color: transparent;
+    border: 1px solid var(--font-color);
+    color: var(--font-color);
+    font-size: inherit;
+    flex: 1;
+    padding: 0.25rem;
+    margin: 0 0.5rem;
 
-  transition-duration: 200ms;
-  transition-property: all;
-  transition-timing-function: ease-in-out;
+    transition-duration: 200ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
 }
 
 .ButtonContainer > button:focus,
 .ButtonContainer > button:active {
-  border: 1px solid var(--highlight-color);
-  color: var(--highlight-color);
-  /* background-color: var(--font-color); */
-  outline: none;
+    border: 1px solid var(--highlight-color);
+    color: var(--highlight-color);
+    /* background-color: var(--font-color); */
+    outline: none;
 }
 
 .firstRow {
-  flex: 1;
-  padding: 1rem;
+    flex: 1;
+    margin: 0.5rem 0;
 }
 
 .secondRow {
-  padding-right: 0.5rem;
-  border-right: 2px solid var(--highlight-color);
+    padding-right: 0.5rem;
+    border-right: 2px solid var(--highlight-color);
 }
 
 .thirdRow {
-  padding-left: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 @media all and (max-width: 800px) {
-  .secondRow,
-  .thirdRow {
-    flex: 1;
-  }
-  .CatsAndTags {
-    flex-wrap: wrap;
-  }
-  .CatsAndTags > span {
-    display: block;
-    width: 100%;
-  }
+    .secondRow,
+    .thirdRow {
+        flex: 1;
+    }
+    .CatsAndTags {
+        flex-wrap: wrap;
+    }
+    .CatsAndTags > span {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .ButtonContainer {
+        flex-direction: column;
+    }
+
+    .ButtonContainer > button {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .LinkWrapper {
+        /* order: 1; */
+        justify-content: flex-end;
+        padding-right: 1rem;
+    }
+    .Post {
+        display: flex;
+        background-color: transparent;
+        border-bottom: 2px solid;
+    }
+    .PostTitleContainer,
+    .PostFooter {
+        border-radius: unset;
+        border: unset;
+    }
+
+    .PostTitleContainer {
+        background-color: #313131;
+    }
+
+    .ButtonContainer > button {
+        align-self: center;
+        min-height: 3rem;
+    }
 }

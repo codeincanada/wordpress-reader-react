@@ -69,7 +69,7 @@ const Post = props => {
         </h2>
         <aside className="PostFooter">
           {/* <div className="CatsAndTags"> */}
-          <span className="firstRow">Published on {post.date}</span>
+          {/* <span className="firstRow">Published on {post.date}</span> */}
           {/* <Categories in={translatedCategories} className="secondRow" />
             <Tags in={translatedTags} className="thirdRow" /> */}
           {/* </div> */}
