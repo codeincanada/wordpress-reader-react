@@ -26,6 +26,13 @@
 .LinkWrapper {
     flex: 1;
     color: var(--font-color);
+    &:focus,
+    &:active {
+        outline-color: var(--highlight-color);
+        outline-offset: calc(1rem - 4px);
+        outline-style: solid;
+        outline-width: 3px;
+    }
 }
 
 .LinkWrapper > span {
@@ -93,9 +100,9 @@
 
 .ButtonContainer > button:focus,
 .ButtonContainer > button:active {
-    border: 1px solid var(--highlight-color);
-    color: var(--highlight-color);
-    /* background-color: var(--font-color); */
+    border: 1px solid var(--font-color);
+    // color: var(--highlight-color);
+    background-color: var(--highlight-color);
     outline: none;
 }
 

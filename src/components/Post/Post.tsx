@@ -1,5 +1,5 @@
 import React from "react";
-import "./Post.css";
+import "./Post.scss";
 
 // Create an Inline list shared component
 // const Categories = props => {
