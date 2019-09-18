@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Post from "./Post";
+import Post from "./Post/Post";
 import GetCategories from "../libs/GetCategories";
 import GetTags from "../libs/GetTags";
+import Loader from "./Loader/Loader";
 
 const Posts = props => {
   const [categories, setCategories] = useState();
@@ -11,8 +12,7 @@ const Posts = props => {
   GetCategories.then(x => setCategories(x));
 
   if (!props.in) {
-    const message = "Add loader here...";
-    return <h1>{message}</h1>;
+    return <Loader />;
   } else {
     return props.in.map(e => (
       <Post in={e} tags={tags} categories={categories} key={e.id} />

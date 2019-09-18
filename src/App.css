@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
   user-select: none;
+  transition-duration: 200ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
 }
 
 /*default inheritance*/
