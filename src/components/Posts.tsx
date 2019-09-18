@@ -4,7 +4,7 @@ import GetCategories from "../libs/GetCategories";
 import GetTags from "../libs/GetTags";
 import Loader from "./Loader/Loader";
 
-const Posts = props => {
+const Posts = (props:any) => {
   const [categories, setCategories] = useState();
   const [tags, setTags] = useState();
 
@@ -14,7 +14,7 @@ const Posts = props => {
   if (!props.in) {
     return <Loader />;
   } else {
-    return props.in.map(e => (
+    return props.in.map((e:any) => (
       <Post in={e} tags={tags} categories={categories} key={e.id} />
     ));
   }

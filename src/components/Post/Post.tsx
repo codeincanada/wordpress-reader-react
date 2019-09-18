@@ -14,7 +14,7 @@ import "./Post.css";
 //   return <ul className={classes}>{items}</ul>;
 // };
 
-const Post = props => {
+const Post = (props:any) => {
   // console.log("=D", props);
 
   const post = props.in;
