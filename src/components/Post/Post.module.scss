@@ -1,10 +1,10 @@
 :root {
-    --highlight-color: hotpink;
+    --highlight-color: #e91e63;
     --background-color: #474747;
-    --font-color: whitesmoke;
+    --font-color: white;
 }
 
-.Post {
+.Root {
     background-color: var(--background-color);
     margin-bottom: 1rem;
     /* border-radius: 4px; */
@@ -18,7 +18,6 @@
     padding: 1rem;
     margin: 0;
     width: 100%;
-    background-color: hsla(0, 0%, 0%, 0.2);
     border: 1px solid;
     border-bottom: none;
     border-radius: 4px 4px 0 0;
@@ -60,6 +59,7 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+    background-color: hsla(0, 0%, 0%, 0.2);
 }
 
 .PostFooter > * {
@@ -98,6 +98,7 @@
     transition-timing-function: ease-in-out;
 }
 
+.ButtonContainer > button:hover,
 .ButtonContainer > button:focus,
 .ButtonContainer > button:active {
     border: 1px solid var(--font-color);
@@ -150,7 +151,7 @@
         justify-content: flex-end;
         padding-right: 1rem;
     }
-    .Post {
+    .Root {
         display: flex;
         background-color: transparent;
         border-bottom: 2px solid;
@@ -159,11 +160,17 @@
     .PostFooter {
         border-radius: unset;
         border: unset;
+        border-bottom: none;
     }
 
-    .PostTitleContainer {
-        background-color: #313131;
+    .PostFooter {
+        max-width: 40%;
+        font-size: 0.75rem;
+        background-color: transparent;
     }
+    // .PostTitleContainer {
+        // background-color: #313131;
+    // }
 
     .ButtonContainer > button {
         align-self: center;

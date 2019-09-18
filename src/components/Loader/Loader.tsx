@@ -1,4 +1,4 @@
 import React from "react";
-import "./Loader.scss";
-const Loader = () => <div className="lds-hourglass"></div>;
+import styles from "./Loader.module.scss";
+const Loader = () => <div className={styles.ldsHourglass}></div>;
 export default Loader;

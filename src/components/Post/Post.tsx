@@ -1,5 +1,5 @@
 import React from "react";
-import "./Post.scss";
+import styles from "./Post.module.scss";
 
 // Create an Inline list shared component
 // const Categories = props => {
@@ -60,20 +60,20 @@ const Post = (props:any) => {
   } else {
     // console.info(post);
     return (
-      <article className="Post" key={post.id}>
-        <h2 className="PostTitleContainer">
-          <a href={post.link} className="LinkWrapper">
+      <article className={styles.Root} key={post.id}>
+        <h2 className={styles.PostTitleContainer}>
+          <a href={post.link} className={styles.LinkWrapper} title={'Post ID = ' + post.id}>
             {post.title.rendered}
           </a>
-          <span className="PostID">ID:{post.id}</span>
+          {/* <span className={styles.PostID}>ID:{post.id}</span> */}
         </h2>
-        <aside className="PostFooter">
+        <aside className={styles.PostFooter}>
           {/* <div className="CatsAndTags"> */}
           {/* <span className="firstRow">Published on {post.date}</span> */}
           {/* <Categories in={translatedCategories} className="secondRow" />
             <Tags in={translatedTags} className="thirdRow" /> */}
           {/* </div> */}
-          <div className="ButtonContainer">
+          <div className={styles.ButtonContainer}>
             {/* TODO: Service Worker and Local Storage */}
             <button id="save">Save offline</button>
             {/* TODO: post.excerpt.rendered */}

@@ -16,6 +16,9 @@ body {
   background-color: #313131;
   color: whitesmoke;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -23,10 +26,10 @@ a {
   align-items: center;
   text-decoration: none;
 }
-a::after {
-  content: " 🚀";
-  font-size: 0.6em;
-}
+// a::after {
+//   content: " 🚀";
+//   font-size: 0.6em;
+// }
 
 button,
 input[type="button"] {
