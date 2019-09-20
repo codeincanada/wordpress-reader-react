@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wordpress-reader-react/static/css/main.4a66ca87.chunk.css",
-    "main.js": "/wordpress-reader-react/static/js/main.fd396e39.chunk.js",
-    "main.js.map": "/wordpress-reader-react/static/js/main.fd396e39.chunk.js.map",
-    "runtime~main.js": "/wordpress-reader-react/static/js/runtime~main.5d79ecde.js",
-    "runtime~main.js.map": "/wordpress-reader-react/static/js/runtime~main.5d79ecde.js.map",
-    "static/js/2.ec5b2a76.chunk.js": "/wordpress-reader-react/static/js/2.ec5b2a76.chunk.js",
-    "static/js/2.ec5b2a76.chunk.js.map": "/wordpress-reader-react/static/js/2.ec5b2a76.chunk.js.map",
-    "index.html": "/wordpress-reader-react/index.html",
-    "precache-manifest.baafd51ca77d68f842c19780bec4ab4e.js": "/wordpress-reader-react/precache-manifest.baafd51ca77d68f842c19780bec4ab4e.js",
-    "service-worker.js": "/wordpress-reader-react/service-worker.js",
-    "static/css/main.4a66ca87.chunk.css.map": "/wordpress-reader-react/static/css/main.4a66ca87.chunk.css.map"
+    "main.css": "./static/css/main.4a66ca87.chunk.css",
+    "main.js": "./static/js/main.eb5e8fc5.chunk.js",
+    "main.js.map": "./static/js/main.eb5e8fc5.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.2133df62.js",
+    "runtime~main.js.map": "./static/js/runtime~main.2133df62.js.map",
+    "static/js/2.ec5b2a76.chunk.js": "./static/js/2.ec5b2a76.chunk.js",
+    "static/js/2.ec5b2a76.chunk.js.map": "./static/js/2.ec5b2a76.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.284dd2d9b912dd1eea3319d587f30f4c.js": "./precache-manifest.284dd2d9b912dd1eea3319d587f30f4c.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.4a66ca87.chunk.css.map": "./static/css/main.4a66ca87.chunk.css.map"
   }
 }
