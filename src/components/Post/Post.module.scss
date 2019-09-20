@@ -9,8 +9,10 @@
     justify-content: center;
     align-items: center;
     max-width: 800px;
+    width: 90vw;
 }
 .Root {
+    width: 100%;
     background-color: var(--background-color);
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -24,7 +26,6 @@
     display: flex;
     align-items: center;
     margin: 0;
-    width: 100%;
     cursor: pointer;
     padding-left: 0.5rem;
     border-left: 0.5rem solid transparent;
@@ -84,6 +85,18 @@
     transition-duration: 200ms;
     transition-property: all;
     transition-timing-function: ease-in-out;
+    background-color: hsla(0,0%,66.3%,.13);
+    overflow: hidden;
+    width: 100% !important;
+        max-width: 80vw !important;
+
+    & * {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100% !important;
+        max-width: 80vw !important;
+        color: rgba(245, 245, 245, 0.55) !important;
+    }
 }
 
 .ButtonContainer {
@@ -126,7 +139,6 @@
     .Root,
     .PostFooter {
         padding-bottom: 0;
-        width: 100%;
     }
 }
 

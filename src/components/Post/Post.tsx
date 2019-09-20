@@ -4,7 +4,7 @@ import styles from './Post.module.scss';
 const Post = (props: any) => {
     const [expandPost, setExpandPost] = useState(false);
     const [showContent, setShowContent] = useState(false);
-    
+
     // TODO: Emit an event to the parent to notify a post was selected
     const post = props.in;
 
@@ -37,7 +37,9 @@ const Post = (props: any) => {
                                     {/* TODO: post.excerpt.rendered */}
                                     <button
                                         id="expand"
-                                        onClick={() => setShowContent(!showContent)}
+                                        onClick={() =>
+                                            setShowContent(!showContent)
+                                        }
                                     >
                                         <span role="img" aria-label="Icon">
                                             🎶
@@ -62,7 +64,10 @@ const Post = (props: any) => {
                         dangerouslySetInnerHTML={{
                             __html: post.content.rendered,
                         }}
-                    ></aside>
+                    >
+                        {/* Alternatively, we could display the published page untouched  */}
+                        {/* <iframe src={post.guid.rendered} title={post.slug} style={{"width": "100%", "height": "90vh"}}/> */}
+                    </aside>
                 )}
             </article>
         );
